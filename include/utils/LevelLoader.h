@@ -15,6 +15,13 @@ struct ObstacleData
   double m_rotation;
 };
 
+struct PathData
+{
+	std::string m_type;
+	sf::Vector2f m_position;
+	double m_rotation;
+};
+
 struct BackgroundData
 {
    std::string m_fileName;

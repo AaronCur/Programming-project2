@@ -8,6 +8,14 @@ void operator >> (const YAML::Node& obstacleNode, ObstacleData& obstacle)
    obstacle.m_rotation = obstacleNode["rotation"].as<double>();
 }
 
+void operator >> (const YAML::Node& pathNode, PathData& path)
+{
+	path.m_type = pathNode["type"].as<std::string>();
+	path.m_position.x = pathNode["position"]["x"].as<float>();
+	path.m_position.y = pathNode["position"]["y"].as<float>();
+	path.m_rotation = pathNode["rotation"].as<double>();
+}
+
 void operator >> (const YAML::Node& backgroundNode, BackgroundData& background)
 {
    background.m_fileName = backgroundNode["file"].as<std::string>();

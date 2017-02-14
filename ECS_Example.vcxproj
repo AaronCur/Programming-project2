@@ -25,6 +25,7 @@
     <ClInclude Include="include\components\Display.h" />
     <ClInclude Include="include\components\Motion.h" />
     <ClInclude Include="include\components\Parent.h" />
+    <ClInclude Include="include\components\Path.h" />
     <ClInclude Include="include\components\PlayerControl.h" />
     <ClInclude Include="include\components\Position.h" />
     <ClInclude Include="include\components\Tank.h" />
@@ -49,6 +50,7 @@
     <ClInclude Include="include\utils\LevelLoader.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Path.cpp" />
     <ClCompile Include="src\ai\TankAi.cpp" />
     <ClCompile Include="src\components\Ai.cpp" />
     <ClCompile Include="src\components\Background.cpp" />

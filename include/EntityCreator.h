@@ -12,6 +12,7 @@
 #include "components/Turret.h"
 #include "components/Parent.h"
 #include "components/PlayerControl.h"
+#include "components/Path.h"
 #include "utils/LevelLoader.h"
 #include "components/Wall.h"
 #include "components/Ai.h"
@@ -65,6 +66,23 @@ class WallCreator : public ICreatable
 public:
 
 	WallCreator(std::string type,
+		sf::Vector2f position,
+		double rotation);
+
+	void create(entityx::Entity& entity);
+
+private:
+	std::string m_type;
+	sf::Vector2f m_position;
+	double m_rotation;
+
+};
+
+class NodeCreator : public ICreatable
+{
+public:
+
+	NodeCreator(std::string type,
 		sf::Vector2f position,
 		double rotation);
 

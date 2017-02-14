@@ -1,13 +1,13 @@
 #include "ai/TankAi.h"
 
-TankAi::TankAi(std::vector<sf::CircleShape> const & obstacles, entityx::Entity::Id id)
+TankAi::TankAi(std::vector<sf::CircleShape> const & obstacles, entityx::Entity::Id pathId)
   : m_aiBehaviour(AiBehaviour::SEEK_PLAYER)
   , m_steering(0,0)
   , m_obstacles(obstacles)
 {
 }
 
-void TankAi::update(entityx::Entity::Id playerId,
+void TankAi::update(entityx::Entity::Id pathId,
 	entityx::Entity::Id aiId,
 	entityx::EntityManager& entities,
 	double dt)
@@ -16,7 +16,7 @@ void TankAi::update(entityx::Entity::Id playerId,
 	Motion::Handle motion = aiTank.component<Motion>();
 	Position::Handle position = aiTank.component<Position>();
 
-	sf::Vector2f vectorToPlayer = seek(playerId,
+	sf::Vector2f vectorToPlayer = seek(pathId,
 		aiId,
 		entities);
 	switch (m_aiBehaviour)
@@ -71,16 +71,16 @@ void TankAi::update(entityx::Entity::Id playerId,
 	}
 }
 
-sf::Vector2f TankAi::seek(entityx::Entity::Id playerId,
+sf::Vector2f TankAi::seek(entityx::Entity::Id pathId,
 						  entityx::Entity::Id aiId,
 	                      entityx::EntityManager& entities) const
 {
 	entityx::Entity aiTank = entities.get(aiId);
 	Position::Handle aiPos = aiTank.component<Position>();
-	entityx::Entity playerTank = entities.get(playerId);
-	Position::Handle playerPos = playerTank.component<Position>();
+	entityx::Entity path = entities.get(pathId);
+	Position::Handle pathPos = path.component<Position>();
 	//m_ahead = aiPos->m_position + m_velocity * MAX_SEE_AHEAD;
-	sf::Vector2f playerVector = playerPos->m_position - aiPos->m_position;
+	sf::Vector2f playerVector = pathPos->m_position - aiPos->m_position;
 	return playerVector;
 }
 

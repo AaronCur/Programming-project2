@@ -123,6 +123,9 @@
     <ClInclude Include="include\ai\TankAi.h">
       <Filter>Header Files\ai</Filter>
     </ClInclude>
+    <ClInclude Include="include\components\Path.h">
+      <Filter>Header Files\components</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\EntityCreator.cpp">
@@ -205,6 +208,9 @@
     </ClCompile>
     <ClCompile Include="src\ai\TankAi.cpp">
       <Filter>Source Files\ai</Filter>
+    </ClCompile>
+    <ClCompile Include="Path.cpp">
+      <Filter>Source Files\components</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

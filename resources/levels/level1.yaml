@@ -84,3 +84,6 @@ obstacles:
    - type: wall
      position: {x: 1032, y: 632}
      rotation: 0
+paths:
+  - type: path
+    position: {X: 30, Y: 30}
