@@ -1,0 +1,27 @@
+﻿  Game.cpp
+g:\ecs_example-master\src\game.cpp(7): warning C4244: 'initializing': conversion from 'double' to 'sf::Int32', possible loss of data
+  Generating Code...
+  Compiling...
+  LevelSystem.cpp
+  AiControlSystem.cpp
+  main.cpp
+  Ai.cpp
+  TankAi.cpp
+g:\ecs_example-master\src\ai\tankai.cpp(94): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+g:\ecs_example-master\src\ai\tankai.cpp(123): warning C4018: '<': signed/unsigned mismatch
+  GameManager.cpp
+  Generating Code...
+  ECS_Example.vcxproj -> G:\ECS_Example-master\Debug\ECS_Example.exe
+  ECS_Example.vcxproj -> G:\ECS_Example-master\Debug\ECS_Example.pdb (Partial PDB)
+  G:\ECS_Example-master\dlls\sfml-audio-2.dll
+  G:\ECS_Example-master\dlls\sfml-audio-d-2.dll
+  G:\ECS_Example-master\dlls\sfml-graphics-2.dll
+  G:\ECS_Example-master\dlls\sfml-graphics-d-2.dll
+  G:\ECS_Example-master\dlls\sfml-network-2.dll
+  G:\ECS_Example-master\dlls\sfml-network-d-2.dll
+  G:\ECS_Example-master\dlls\sfml-system-2.dll
+  G:\ECS_Example-master\dlls\sfml-system-d-2.dll
+  G:\ECS_Example-master\dlls\sfml-window-2.dll
+  G:\ECS_Example-master\dlls\sfml-window-d-2.dll
+  G:\ECS_Example-master\dlls\thor-d.dll
+         11 file(s) copied.
